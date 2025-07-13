@@ -36,7 +36,7 @@ class SmoothHeadDragAim {
     this.kalmanX = new KalmanFilter();
     this.kalmanY = new KalmanFilter();
     this.kalmanZ = new KalmanFilter();
-    this.dragSensitivity = 2.0; // max drag
+    this.dragSensitivity = 5.0; // max drag
     this.prevAim = Vector3.zero();
   }
 
