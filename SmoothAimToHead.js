@@ -40,7 +40,7 @@ class SmoothHeadDragAim {
     this.kalmanX = new KalmanFilter();
     this.kalmanY = new KalmanFilter();
     this.kalmanZ = new KalmanFilter();
-    this.dragSensitivity = 5.0; // max drag
+    this.dragSensitivity = 0.0001; // max drag
     this.prevAim = Vector3.zero();
   }
 
@@ -67,7 +67,7 @@ class SmoothHeadDragAim {
     const tick = () => {
       const headPos = headSourceFunction();
       this.updateHeadTarget(headPos);
-      setTimeout(tick, 16); // ~60FPS
+      setTimeout(tick, 8); // ~60FPS
     };
     tick();
   }
